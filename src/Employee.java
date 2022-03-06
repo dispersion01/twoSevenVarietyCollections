@@ -1,8 +1,5 @@
-import java.util.HashMap;
-import java.util.Map;
-
 public class Employee {
-    private String familyName;
+    private String fullFamily;
     private int department;
     private int salary;
     private int id;
@@ -10,9 +7,9 @@ public class Employee {
 
 
 
-    public Employee(int id, String familyName, int department, int salary) {
+    public Employee(int id, String fullFamily, int department, int salary) {
         this.id = counter++;
-        this.familyName = familyName;
+        this.fullFamily = fullFamily;
         this.department = department;
         this.salary = salary;
 
@@ -20,8 +17,8 @@ public class Employee {
 
 
 
-    public String getFamilyName() {
-        return familyName;
+    public String getFullFamily() {
+        return fullFamily;
     }
 
     public int getDepartment() {
@@ -45,6 +42,6 @@ public class Employee {
     }
     @Override
     public String toString() {
-        return id + " " + familyName + " " + department + " " + salary;
+        return id + " " + fullFamily + " " + department + " " + salary;
     }
 }
