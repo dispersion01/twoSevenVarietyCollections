@@ -1,18 +1,20 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String fullFamily;
     private int department;
     private int salary;
+    Map<Integer, Employee> dataOfWEmployee;
     private int id;
-    private static int counter;
 
 
-
-    public Employee(int id, String fullFamily, int department, int salary) {
-        this.id = counter++;
+    public Employee( String fullFamily, int department, int salary) {
         this.fullFamily = fullFamily;
         this.department = department;
         this.salary = salary;
-
+        dataOfWEmployee = new HashMap<>();;
+        this.id = id++;
     }
 
 
@@ -29,10 +31,6 @@ public class Employee {
         return salary;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public void setDepartment(int department) {
         this.department = department;
     }
@@ -42,6 +40,6 @@ public class Employee {
     }
     @Override
     public String toString() {
-        return id + " " + fullFamily + " " + department + " " + salary;
+        return fullFamily + " " + department + " " + salary;
     }
 }
