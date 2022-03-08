@@ -8,16 +8,14 @@ public class Employee {
     Map<Integer, Employee> dataOfWEmployee;
     private int id;
 
-
-    public Employee( String fullFamily, int department, int salary) {
+    public Employee(String fullFamily, int department, int salary) {
         this.fullFamily = fullFamily;
         this.department = department;
         this.salary = salary;
-        dataOfWEmployee = new HashMap<>();;
+        dataOfWEmployee = new HashMap<>();
+        ;
         this.id = id++;
     }
-
-
 
     public String getFullFamily() {
         return fullFamily;
@@ -38,6 +36,7 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
     @Override
     public String toString() {
         return fullFamily + " " + department + " " + salary;

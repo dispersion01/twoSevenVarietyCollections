@@ -5,20 +5,17 @@ import static javax.swing.UIManager.put;
 
 public class DataEmployee {
     public static void main(String[] args) {
-
-
-        Map dataOfWEmployee = new HashMap();
-
-            dataOfWEmployee.put(0, new Employee("Nikolaeva", 01, 100_000));
-            dataOfWEmployee.put(1, new Employee("Ivanova", 05, 200_000));
-            dataOfWEmployee.put(2, new Employee("Popov", 03, 150_000));
-            dataOfWEmployee.put(3, new Employee("Petrova", 04, 123_000));
-            dataOfWEmployee.put(4, new Employee("Vasilev", 03, 110_000));
-            dataOfWEmployee.put(5, new Employee("Morozova", 05, 150_000));
-            dataOfWEmployee.put(6, new Employee("Pavlov", 02, 200_000));
-            dataOfWEmployee.put(7, new Employee("Sidorov", 04, 160_000));
-            dataOfWEmployee.put(8, new Employee("Orlov", 02, 210_000));
-            dataOfWEmployee.put(9, new Employee("Romanova", 01, 300_000));
+        Map<Integer, Employee> dataOfWEmployee = new HashMap();
+        dataOfWEmployee.put(0, new Employee("Nikolaeva", 01, 100_000));
+        dataOfWEmployee.put(1, new Employee("Ivanova", 05, 200_000));
+        dataOfWEmployee.put(2, new Employee("Popov", 03, 150_000));
+        dataOfWEmployee.put(3, new Employee("Petrova", 04, 123_000));
+        dataOfWEmployee.put(4, new Employee("Vasilev", 03, 110_000));
+        dataOfWEmployee.put(5, new Employee("Morozova", 05, 150_000));
+        dataOfWEmployee.put(6, new Employee("Pavlov", 02, 200_000));
+        dataOfWEmployee.put(7, new Employee("Sidorov", 04, 160_000));
+        dataOfWEmployee.put(8, new Employee("Orlov", 02, 210_000));
+        dataOfWEmployee.put(9, new Employee("Romanova", 01, 300_000));
 
         System.out.println("Метод 1. Вывод всех сотрудников:");
         allEmployee(dataOfWEmployee);
@@ -59,7 +56,6 @@ public class DataEmployee {
     public static void minSalary(Map<Integer, Employee> dataOfWEmployee) { //минимальная зарплата
 
         int min = dataOfWEmployee.get(0).getSalary();
-        int max = dataOfWEmployee.size();
         for (int i = 0; i < dataOfWEmployee.size(); i++) {
             if (dataOfWEmployee.get(i).getSalary() < min) {
                 min = dataOfWEmployee.get(i).getSalary();
